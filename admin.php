@@ -68,6 +68,7 @@ require "cek.php";
                                         <tr>
                                             <th>No</th>
                                             <th>Email Admin</th>
+                                            <th>Status</th>
                                             <th>Aksi</th>
                                         </tr>
                                         </thead>
@@ -78,12 +79,14 @@ require "cek.php";
                                         while($data=mysqli_fetch_array($ambilsemuadataadmin)){
                                         $em = $data['email'];
                                         $iduser = $data['iduser'];
+                                        $roles = $data['roles'];
                                         $pw = $data['password'];
                                         ?>
 
                                         <tr>
                                             <td><?=$i++;?></td>
                                             <td><?=$em;?></td>
+                                            <td><?=$roles;?></td>
                                             <td>
                                         <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#edit<?=$iduser;?>">
                                                     Edit
