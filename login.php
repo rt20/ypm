@@ -19,12 +19,12 @@ if(isset($_POST['login'])){
         if($role=='user'){
             $_SESSION['log'] = 'Logged';
             $_SESSION['roles'] = 'user';
-            header('location:user.php');
+            header('location:user');
             
           } else {
             $_SESSION['log'] = 'Logged';
             $_SESSION['roles'] = 'admin';
-            header('location:dashboard.php');
+            header('location:admin');
           }
         } else {
           echo 'Data tidak ditemukan';
